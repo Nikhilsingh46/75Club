@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>75Club</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="index.html">75Club</a></div>
+      <label class="required-box">
+        Required %
+        <input type="number" id="required" min="1" max="99" value="75">
+      </label>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="summary" id="summary"></section>
+    <section class="subject-list" id="subjectList"></section>
+
+    <!-- add subject form -->
+     <form id="addForm" class="add-form">
+      <h3>Add a subject</h3>
+      <div class="field">
+        <label for="subjectName">Subject Name:</label>
+        <input type="text" id="subjectName" placeholder="e.g. Mathematics" maxlength="40" autocomplete="off" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="attendend">Classes Attendend:</label>
+          <input type="number" id="attendend" min="0" placeholder="e.g. 18" required>
+        </div>
+        <div class="field">
+          <label for="total">Total classes held:</label>
+          <input type="number" id="total" min="0" placeholder="e.g. 22" required>
+        </div>
+      </div>
+
+      <p class="form-error" id="formError"></p>
+      <button type="submit" class="btn-add">+ add subject</button>
+     </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>75Club</h2>
+        <p>Know exactly how many classes you can skip.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 75Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
