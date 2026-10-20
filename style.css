@@ -44,3 +44,262 @@ body{
   color: #fff;
   text-decoration: none;
 }
+
+.logo {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 700;
+}
+
+.required-box{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccfbf1;
+  font-weight: 600;
+}
+
+.required-box input{
+  width: 72px;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ----------main----------------------*/
+
+.main{
+  flex: 1;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/*-----------summary--------------*/
+
+.summary{
+  background: linear-gradient(135deg, #0F766E, #0e7490);
+  color: #fff;
+  padding: 22px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.25);
+}
+
+.summary-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary h2 {
+  margin: 0; font-size: 1.2rem; 
+}
+
+.summary .big { 
+  font-size: 2.4rem; font-weight: 700; 
+}
+
+.summary p { 
+  margin: 8px 0 0; color: #ccfbf1; 
+}
+
+/*--------subject card--------*/
+
+.subject-list{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subject-card{
+  background: var(--card);
+  padding: 18px;
+  border-radius: 18px;
+  border-left: 8px solid var(--border);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.subject-card.safe   { 
+  border-left-color: var(--safe); 
+}
+
+.subject-card.warn   { 
+  border-left-color: var(--warn); 
+}
+
+.subject-card.danger { 
+  border-left-color: var(--danger); 
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-top h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  word-break: break-word;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.safe .badge   { 
+  background: var(--safe-bg);   
+  color: var(--safe); 
+}
+
+.warn .badge   { 
+  background: var(--warn-bg);   
+  color: var(--warn); 
+}
+
+.danger .badge { 
+  background: var(--danger-bg); 
+  color: var(--danger); 
+}
+
+.count { 
+  margin: 6px 0 10px; 
+  color: var(--muted); 
+  font-size: 0.95rem; 
+}
+
+.bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--muted);
+  transition: width 0.4s ease;
+}
+
+.safe .bar-fill   { 
+  background: var(--safe); 
+}
+
+.warn .bar-fill   { 
+  background: var(--warn); 
+}
+
+.danger .bar-fill { 
+  background: var(--danger); 
+}
+
+.message { 
+  margin: 12px 0; 
+  font-weight: 600; 
+}
+
+.actions { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+}
+
+.actions button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-present { 
+  background: var(--safe); 
+  color: #fff; 
+  flex: 1; 
+}
+
+.btn-absent  { 
+  background: var(--danger); 
+  color: #fff; 
+  flex: 1; 
+}
+
+.btn-undo    { 
+  background: var(--border); 
+  color: var(--text); 
+}
+
+.btn-delete  { 
+  background: var(--danger-bg); 
+}
+
+.actions button:disabled { 
+  opacity: 0.4; 
+  cursor: not-allowed; 
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+  text-align: center;
+  padding: 36px 16px;
+  background: var(--card);
+  border: 2px dashed var(--border);
+  border-radius: 18px;
+  color: var(--muted);
+}
+
+.empty-icon { 
+  font-size: 2.5rem; 
+}
+
+/* ---------- Form ---------- */
+
+.add-form{
+  margin-top: 28px;
+  padding: 24px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.form-title { 
+  margin: 0 0 18px; 
+  font-size: 1.2rem; 
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.field-row { 
+  display: flex; 
+  gap: 14px; 
+}
+
+.field label { 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+}
+
+.field input{
+  padding: 13px 14px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: #f8faff;
+}
